@@ -10,8 +10,10 @@ boston_dataset = load_boston()
 boston = pd.DataFrame(boston_dataset.data, columns = boston_dataset.feature_names)
 boston['MEDV'] = boston_dataset.target
 
+
 def correlation():
     return boston.corr()
 
 
 if __name__ == '__main__':
+    correlation()
