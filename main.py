@@ -11,7 +11,7 @@ boston = pd.DataFrame(boston_dataset.data, columns = boston_dataset.feature_name
 boston['MEDV'] = boston_dataset.target
 
 def correlation():
-    boston.corr()
+    return boston.corr()
 
 
 if __name__ == '__main__':
