@@ -31,6 +31,7 @@ def linear():
     This is NOT done here."""
     result = np.where(reg.coef_ == max(reg.coef_, key = abs))
     print("The factor with the most influence is: ", boston.columns[result[0][0]])
+    print("See comments in code for further analysis.")
 
     """Looking at the result and what it stands for (ass well as correlation matrix of the data),
      it doesn't seem like NOX should be the most influential factor.  Then again, any major increase
