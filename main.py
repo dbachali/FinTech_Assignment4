@@ -31,11 +31,11 @@ def linear():
     This is NOT done here."""
     result = np.where(reg.coef_ == max(reg.coef_, key = abs))
     print('The factor with the most influence is: ', boston.columns[result[0][0]])
-    pprint('Looking at the result and what it stands for (as well as correlation matrix of the data'
-           'it doesn\'t seem like NOX should be the most influential factor.  Then again, any major increase'
-           'in nitric oxide concentration could make a location uninhabitable, so it is a fair result,'
-           'we just normally don\'t see a wide range of NOX values in places where people can live.'
-           'Standardizing the factors would account for this and give a more realistic result'
+    pprint('Looking at the result and what it stands for (as well as a correlation matrix of the data), '
+           'it doesn\'t seem like NOX should be the most influential factor.  Then again, any major increase '
+           'in nitric oxide concentration could make a location uninhabitable, so it is a fair result, '
+           'we just normally don\'t see a wide range of NOX values in places where people can live. '
+           'Standardizing the factors would account for this and give a more realistic result '
            '(see comment in code).')
     return
 
@@ -61,8 +61,8 @@ def kmeans():
     plt.xlabel('# Clusters')
     plt.ylabel('Distortion')
     plt.title('Optimal # Clusters via Elbow Heuristic')
-    pprint('Looking at the graph, it can be argued that the size of the distortion tapers off at ~3 clusters.'
-           'One might argue that 2 or 4 might be better, but this is too much change in distortion between'
+    pprint('Looking at the graph, it can be argued that the size of the distortion tapers off at ~3 clusters. '
+           'One might argue that 2 or 4 might be better, but this is too much change in distortion between '
            '2 and 3 clusters and too little change in distortion between 3 and 4 clusters.')
     plt.show()
     return
